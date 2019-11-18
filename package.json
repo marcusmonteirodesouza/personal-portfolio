@@ -1,0 +1,41 @@
+{
+  "name": "freecodecamp-personal-portfolio-webpage",
+  "version": "1.0.0",
+  "description": "My solution to FreeCodeCamp's Build a Personal Portfolio Webpage challenge",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write ./**/*.{html,css,json,md}",
+    "lint": "standard --fix"
+  },
+  "keywords": [],
+  "author": "Marcus Vinicius Monteiro de Souza",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.4.3",
+    "prettier": "^1.19.1",
+    "standard": "^14.3.1"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "fetch"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./**/*.{html,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "./**/*.{js}": [
+      "standard --fix",
+      "git add"
+    ]
+  }
+}
