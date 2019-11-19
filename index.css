@@ -8,17 +8,12 @@ body {
 
 .grid-template-main {
   grid-template:
-    "header" 2rem
     "welcome" 100vh
-    "projects" auto;
+    "projects" 1fr;
 }
 
 .justify-evenly {
   justify-content: space-evenly;
-}
-
-header {
-  grid-area: header;
 }
 
 #welcome-section {
@@ -34,5 +29,5 @@ header {
 }
 
 .gap {
-  gap: 3em;
+  gap: 1em;
 }

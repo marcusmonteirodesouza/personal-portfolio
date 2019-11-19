@@ -1,4 +1,4 @@
-const fetchProfiles = async (url = 'https://raw.githubusercontent.com/marcusmonteirodesouza/personal-portfolio/master/projects.json') => {
+const fetchProfiles = async (url = 'https://raw.githubusercontent.com/marcusmonteirodesouza/personal-portfolio/master/profiles.json') => {
   try {
     const response = await fetch(url)
     const data = await response.json()
@@ -19,7 +19,7 @@ const appendProfiles = (profilesElem, profileLinksElem, navLinksElem, profiles) 
     a.className = 'link hover-bg-blue'
     a.href = profile.profile_link
     a.target = '_blank'
-    a.textContent = 'visit this page'
+    a.textContent = `visit my ${profile.name} profile`
     if (profile.is_main_profile) {
       a.id = 'profile-link'
     }
@@ -70,11 +70,15 @@ const appendProfiles = (profilesElem, profileLinksElem, navLinksElem, profiles) 
     i.className = profile.iconClassName
     p.append(i)
     const span = document.createElement('span')
-    span.className = 'ml3'
+    span.className = 'ml2'
     span.textContent = profile.name
     p.append(span)
 
     li.append(p)
+
+    if (profile.is_main_profile) {
+      appendProfileLinks(profileLinksElem, profile)
+    }
 
     li.onclick = () => appendProfileLinks(profileLinksElem, profile)
 
@@ -96,6 +100,6 @@ window.onload = async () => {
   const profilesElem = document.getElementById('profiles')
   const profileLinksElem = document.getElementById('profile-links')
   const navLinksElem = document.getElementById('nav-links')
-  const profiles = await fetchProfiles('./profiles.json')
+  const profiles = await fetchProfiles()
   appendProfiles(profilesElem, profileLinksElem, navLinksElem, profiles)
 }
