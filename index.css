@@ -2,32 +2,26 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.grid {
-  display: grid;
-}
-
-.grid-template-main {
-  grid-template:
-    "welcome" 100vh
-    "projects" 1fr;
-}
-
 .justify-evenly {
   justify-content: space-evenly;
 }
 
-#welcome-section {
-  grid-area: welcome;
-}
+@media only screen and (min-width: 30em) {
+  .grid-ns {
+    display: grid;
+  }
 
-#projects {
-  grid-area: projects;
-}
+  .grid-template-main-ns {
+    grid-template:
+      "welcome" 100vh
+      "projects" 1fr;
+  }
 
-.grid-template-projects {
-  grid-template: "group links" / 1fr 1fr;
-}
+  .grid-template-projects-ns {
+    grid-template: "group links" / 1fr 1fr;
+  }
 
-.gap {
-  gap: 1em;
+  .gap-ns {
+    gap: 1em;
+  }
 }
