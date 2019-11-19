@@ -1,0 +1,30 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-template {
+  grid-template:
+    "header" 2rem
+    "welcome" auto
+    "projects" auto;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+header {
+  grid-area: header;
+}
+
+#welcome-section {
+  grid-area: welcome;
+}
+
+#projects {
+  grid-area: projects;
+}

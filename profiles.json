@@ -1,0 +1,97 @@
+[
+  {
+    "name": "freecodecamp",
+    "iconClassName": "fab fa-free-code-camp",
+    "profile_link": "https://www.freecodecamp.org/marcusmonteirodesouza",
+    "is_main_profile": true,
+    "projects": [
+      {
+        "name": "build a technical documentation page",
+        "links": [
+          {
+            "name": "source",
+            "link": "https://codepen.io/marcusmonteirodesouza/pen/BaaqvYZ"
+          },
+          {
+            "name": "live",
+            "link": "https://codepen.io/marcusmonteirodesouza/full/BaaqvYZ"
+          }
+        ]
+      },
+      {
+        "name": "build a product landing page",
+        "links": [
+          {
+            "name": "source",
+            "link": "https://codepen.io/marcusmonteirodesouza/pen/VwwEjyR"
+          },
+          {
+            "name": "live",
+            "link": "https://codepen.io/marcusmonteirodesouza/full/VwwEjyR"
+          }
+        ]
+      },
+      {
+        "name": "build a survey form",
+        "links": [
+          {
+            "name": "source",
+            "link": "https://codepen.io/marcusmonteirodesouza/pen/jOOKmwr"
+          },
+          {
+            "name": "live",
+            "link": "https://codepen.io/marcusmonteirodesouza/full/jOOKmwr"
+          }
+        ]
+      },
+      {
+        "name": "build a tribute page",
+        "links": [
+          {
+            "name": "source",
+            "link": "https://codepen.io/marcusmonteirodesouza/pen/zYYjerP"
+          },
+          {
+            "name": "live",
+            "link": "https://codepen.io/marcusmonteirodesouza/full/zYYjerP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "linkedin",
+    "iconClassName": "fab fa-linkedin",
+    "profile_link": "https://www.linkedin.com/in/marcusmonteiro3/"
+  },
+  {
+    "name": "instagram",
+    "iconClassName": "fab fa-instagram",
+    "profile_link": "https://www.instagram.com/marcus_vinicius_monteiro_/"
+  },
+  {
+    "name": "stackoverflow",
+    "iconClassName": "fab fa-stack-overflow",
+    "profile_link": "https://stackoverflow.com/users/819720/marcus-vin%C3%ADcius-monteiro"
+  },
+  {
+    "name": "github",
+    "iconClassName": "fab fa-github",
+    "profile_link": "https://github.com/marcusmonteirodesouza",
+    "projects": [
+      {
+        "name": "finding islands",
+        "links": [
+          {
+            "name": "source",
+            "link": "https://github.com/marcusmonteirodesouza/finding-islands"
+          },
+          {
+            "name": "live",
+            "link": "https://marcusmonteirodesouza.github.io/finding-islands/"
+          }
+        ]
+      }
+    ]
+  }
+]

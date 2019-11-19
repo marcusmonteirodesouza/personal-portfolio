@@ -5,28 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Marcus Vinicius Monteiro de Souza - Personal Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link href="index.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/e0d5348d54.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
-    <nav id="navbar">
-      <ul>
-        <li><a href="#projects">Projects</a></li>
-      </ul>
-    </nav>
-    <section id="welcome-section">
-      <h1>The welcome section should have an h1 element that contains text.</h1>
-    </section>
-    <section id="projects">
-      <div class="project-tile">
-        <a href="#project-link" target="_blank"
-          >The projects section should contain at least one link to a
-          project.</a
-        >
-      </div>
-    </section>
-    <section>
-      <a id="profile-link" target="_blank">Profile Link</a>
-    </section>
+  <body class="bg-black-80 light-green">
+    <main class="grid grid-template">
+      <header class="fixed w-100 bg-black-90">
+        <nav id="navbar">
+          <ul class="list flex justify-evenly pa0" id="nav-links">
+            <li><a class="link" href="#projects">Projects</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="mv2" id="welcome-section">
+        <h1>
+          The welcome section should have an h1 element that contains text.
+        </h1>
+        <div class="flex flex-column justify-center items-center" id="resume">
+          <p>my resume</p>
+          <a
+            href="resume_marcus_vinicius_monteiro_software_developer.pdf"
+            download="resume_marcus_vinicius_monteiro_software_developer.pdf"
+            ><i class="fas fa-download"></i
+          ></a>
+        </div>
+      </section>
+      <section id="projects">
+        <h2 class="tc">Projects</h2>
+        <ul class="list" id="profiles"></ul>
+      </section>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
