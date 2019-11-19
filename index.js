@@ -8,25 +8,24 @@ const fetchProfiles = async (url = 'https://raw.githubusercontent.com/marcusmont
   }
 }
 
-const appendProfiles = (profilesElem, navLinksElem, profiles) => {
-  profiles.forEach(profile => {
-    const profileContainer = document.createElement('li')
-    profileContainer.id = profile.name
+const appendProfiles = (profilesElem, profileLinksElem, navLinksElem, profiles) => {
+  const appendProfileLinks = (profileLinksElem, profile) => {
+    profileLinksElem.innerHTML = ''
 
-    const profileNameDisplay = document.createElement('h3')
-    profileNameDisplay.textContent = profile.name
-    profileContainer.append(profileNameDisplay)
-
-    const profileLink = document.createElement('a')
-    profileLink.href = profile.profile_link
-    profileLink.target = '_blank'
+    const li = document.createElement('li')
+    const h3 = document.createElement('h3')
+    h3.className = 'bb'
+    const a = document.createElement('a')
+    a.className = 'link hover-bg-blue'
+    a.href = profile.profile_link
+    a.target = '_blank'
+    a.textContent = 'visit this page'
     if (profile.is_main_profile) {
-      profileLink.id = 'profile-link'
+      a.id = 'profile-link'
     }
-    const icon = document.createElement('i')
-    icon.className = profile.iconClassName
-    profileLink.append(icon)
-    profileContainer.append(profileLink)
+    h3.append(a)
+    li.append(h3)
+    profileLinksElem.append(li)
 
     if ('projects' in profile) {
       const projectsList = document.createElement('ul')
@@ -48,7 +47,7 @@ const appendProfiles = (profilesElem, navLinksElem, profiles) => {
           const linkElem = document.createElement('a')
           linkElem.href = link.link
           linkElem.target = '_blank'
-          linkElem.className = 'link'
+          linkElem.className = 'link hover-bg-blue'
           linkElem.textContent = link.name
           li.append(linkElem)
           projectLinks.append(li)
@@ -56,18 +55,38 @@ const appendProfiles = (profilesElem, navLinksElem, profiles) => {
 
         projectTile.append(projectLinks)
 
-        profileContainer.append(projectTile)
+        profileLinksElem.append(projectTile)
       })
     }
-    profilesElem.append(profileContainer)
+  }
+
+  profiles.forEach(profile => {
+    const li = document.createElement('li')
+    li.id = profile.name
+    li.className = 'grow shadow-hover'
+
+    const p = document.createElement('p')
+    const i = document.createElement('i')
+    i.className = profile.iconClassName
+    p.append(i)
+    const span = document.createElement('span')
+    span.className = 'ml3'
+    span.textContent = profile.name
+    p.append(span)
+
+    li.append(p)
+
+    li.onclick = () => appendProfileLinks(profileLinksElem, profile)
+
+    profilesElem.append(li)
 
     // append navlink
 
     const navLinkContainer = document.createElement('li')
     const navLink = document.createElement('a')
-    navLink.href = `#${profileContainer.id}`
-    navLink.className = 'link'
-    navLink.textContent = profileContainer.id
+    navLink.href = `#${li.id}`
+    navLink.className = 'link dim white'
+    navLink.textContent = li.id
     navLinkContainer.append(navLink)
     navLinksElem.append(navLinkContainer)
   })
@@ -75,7 +94,8 @@ const appendProfiles = (profilesElem, navLinksElem, profiles) => {
 
 window.onload = async () => {
   const profilesElem = document.getElementById('profiles')
-  const profiles = await fetchProfiles('./profiles.json')
+  const profileLinksElem = document.getElementById('profile-links')
   const navLinksElem = document.getElementById('nav-links')
-  appendProfiles(profilesElem, navLinksElem, profiles)
+  const profiles = await fetchProfiles('./profiles.json')
+  appendProfiles(profilesElem, profileLinksElem, navLinksElem, profiles)
 }

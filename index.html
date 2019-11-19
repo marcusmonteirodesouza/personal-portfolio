@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Marcus Vinicius Monteiro de Souza - Personal Portfolio</title>
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
       rel="stylesheet"
+    />
+    <link
       href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
+      rel="stylesheet"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
@@ -19,32 +23,39 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="bg-black-80 light-green">
-    <main class="grid grid-template">
+  <body class="">
+    <main class="grid grid-template-main">
       <header class="fixed w-100 bg-black-90">
         <nav id="navbar">
           <ul class="list flex justify-evenly pa0" id="nav-links">
-            <li><a class="link" href="#projects">Projects</a></li>
+            <li><a class="link dim light-silver" href="#">Start</a></li>
+            <li><a class="link dim white" href="#projects">Projects</a></li>
           </ul>
         </nav>
       </header>
 
       <section class="mv2" id="welcome-section">
-        <h1>
+        <h1 class="tc">
           The welcome section should have an h1 element that contains text.
         </h1>
         <div class="flex flex-column justify-center items-center" id="resume">
-          <p>my resume</p>
-          <a
-            href="resume_marcus_vinicius_monteiro_software_developer.pdf"
-            download="resume_marcus_vinicius_monteiro_software_developer.pdf"
-            ><i class="fas fa-download"></i
-          ></a>
+          <p>
+            <a
+              class="shadow-hover"
+              href="resume_marcus_vinicius_monteiro_software_developer.pdf"
+              download="cv_marcus_vinicius_monteiro_software_developer.pdf"
+              ><i class="fas fa-download"></i>
+              <span class="ml2">download my cv</span></a
+            >
+          </p>
         </div>
       </section>
-      <section id="projects">
+      <section class="mh6" id="projects">
         <h2 class="tc">Projects</h2>
-        <ul class="list" id="profiles"></ul>
+        <div class="grid grid-template-projects gap">
+          <ul class="list br" id="profiles"></ul>
+          <ul class="list" id="profile-links"></ul>
+        </div>
       </section>
     </main>
     <script src="index.js"></script>

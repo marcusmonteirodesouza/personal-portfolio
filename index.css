@@ -6,10 +6,10 @@ body {
   display: grid;
 }
 
-.grid-template {
+.grid-template-main {
   grid-template:
     "header" 2rem
-    "welcome" auto
+    "welcome" 100vh
     "projects" auto;
 }
 
@@ -27,4 +27,12 @@ header {
 
 #projects {
   grid-area: projects;
+}
+
+.grid-template-projects {
+  grid-template: "group links" / 1fr 1fr;
+}
+
+.gap {
+  gap: 3em;
 }
