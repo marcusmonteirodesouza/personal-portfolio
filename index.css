@@ -2,21 +2,29 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.grid {
+  display: grid;
+}
+
+.grid-template {
+  grid-template:
+    "welcome" 100vh
+    "projects" auto;
+}
+
+#welcome {
+  grid-area: welcome;
+}
+
+#project {
+  grid-area: projects;
+}
+
 .justify-evenly {
   justify-content: space-evenly;
 }
 
 @media only screen and (min-width: 30em) {
-  .grid-ns {
-    display: grid;
-  }
-
-  .grid-template-main-ns {
-    grid-template:
-      "welcome" 100vh
-      "projects" 1fr;
-  }
-
   .grid-template-projects-ns {
     grid-template: "group links" / 1fr 1fr;
   }

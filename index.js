@@ -70,7 +70,7 @@ const appendProfiles = (profilesElem, profileLinksElem, navLinksElem, profiles) 
     i.className = profile.iconClassName
     p.append(i)
     const span = document.createElement('span')
-    span.className = 'ml2-ns'
+    span.className = 'ml2'
     span.textContent = profile.name
     p.append(span)
 
