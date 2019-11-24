@@ -56,6 +56,19 @@
             "link": "https://codepen.io/marcusmonteirodesouza/full/zYYjerP"
           }
         ]
+      },
+      {
+        "name": "build a random quote machine",
+        "links": [
+          {
+            "name": "source",
+            "link": "https://github.com/marcusmonteirodesouza/freecodecamp-random-quote-machine"
+          },
+          {
+            "name": "live",
+            "link": "https://codepen.io/marcusmonteirodesouza/full/poomjGq"
+          }
+        ]
       }
     ]
   },
