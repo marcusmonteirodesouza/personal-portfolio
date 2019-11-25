@@ -69,6 +69,19 @@
             "link": "https://codepen.io/marcusmonteirodesouza/full/poomjGq"
           }
         ]
+      },
+      {
+        "name": "build a markdown previewer",
+        "links": [
+          {
+            "name": "source",
+            "link": "https://github.com/marcusmonteirodesouza/freecodecamp-markdown-previewer"
+          },
+          {
+            "name": "live",
+            "link": "https://codepen.io/marcusmonteirodesouza/full/gOOJNyR"
+          }
+        ]
       }
     ]
   },
