@@ -6,7 +6,7 @@
     "is_main_profile": true,
     "projects": [
       {
-        "name": "build a technical documentation page",
+        "name": "Technical Documentation Page",
         "links": [
           {
             "name": "source",
@@ -19,7 +19,7 @@
         ]
       },
       {
-        "name": "build a product landing page",
+        "name": "Product Landing Page",
         "links": [
           {
             "name": "source",
@@ -32,7 +32,7 @@
         ]
       },
       {
-        "name": "build a survey form",
+        "name": "Survey Form",
         "links": [
           {
             "name": "source",
@@ -45,7 +45,7 @@
         ]
       },
       {
-        "name": "build a tribute page",
+        "name": "Tribute Page",
         "links": [
           {
             "name": "source",
@@ -58,7 +58,7 @@
         ]
       },
       {
-        "name": "build a random quote machine",
+        "name": "Random Quote Machine",
         "links": [
           {
             "name": "source",
@@ -71,7 +71,7 @@
         ]
       },
       {
-        "name": "build a markdown previewer",
+        "name": "Markdown Previewer",
         "links": [
           {
             "name": "source",
@@ -80,6 +80,71 @@
           {
             "name": "live",
             "link": "https://codepen.io/marcusmonteirodesouza/full/gOOJNyR"
+          }
+        ]
+      },
+      {
+        "name": "Timestamp Microservice",
+        "links": [
+          {
+            "name": "source",
+            "link": "https://glitch.com/edit/#!/marcus-timestamp-microservice"
+          },
+          {
+            "name": "live",
+            "link": "https://marcus-timestamp-microservice.glitch.me"
+          }
+        ]
+      },
+      {
+        "name": "Request Header Parser Microservice",
+        "links": [
+          {
+            "name": "source",
+            "link": "https://glitch.com/edit/#!/marcus-request-header-parser-microservice"
+          },
+          {
+            "name": "live",
+            "link": "https://marcus-request-header-parser-microservice.glitch.me"
+          }
+        ]
+      },
+      {
+        "name": "URL Shortener Microservice",
+        "links": [
+          {
+            "name": "source",
+            "link": "https://glitch.com/edit/#!/marcus-url-shortener-microservice"
+          },
+          {
+            "name": "live",
+            "link": "https://marcus-url-shortener-microservice.glitch.me"
+          }
+        ]
+      },
+      {
+        "name": "Exercise Tracker",
+        "links": [
+          {
+            "name": "source",
+            "link": "https://glitch.com/edit/#!/marcus-exercise-tracker"
+          },
+          {
+            "name": "live",
+            "link": "https://marcus-exercise-tracker.glitch.me"
+          }
+        ]
+      },
+      {
+        "name": "File Metadata Microservice",
+        "links": [
+          {
+            "name": "source",
+            "link": "https://glitch.com/edit/#!/marcus-file-metadata-microservice"
+          },
+          {
+            "name": "live",
+            "link": "https://marcus-file-metadata-microservice.glitch.me"
           }
         ]
       }
